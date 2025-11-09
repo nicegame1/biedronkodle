@@ -1,6 +1,18 @@
-modules = ["nodejs-20", "web", "postgresql-16"]
 run = "npm run dev"
-hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
+
+# Ukryte pliki/foldery w eksploratorze
+hidden = [".config", ".git", "node_modules", "dist", "generated-icon.png"]
+
+[env]
+PORT = "5000"
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 40499
+externalPort = 3000
 
 [nix]
 channel = "stable-24_05"
@@ -9,17 +21,6 @@ channel = "stable-24_05"
 deploymentTarget = "autoscale"
 build = ["npm", "run", "build"]
 run = ["npm", "run", "start"]
-
-[[ports]]
-localPort = 5000
-externalPort = 80
-
-[[ports]]
-localPort = 40499
-externalPort = 3000
-
-[env]
-PORT = "5000"
 
 [workflows]
 runButton = "Project"
