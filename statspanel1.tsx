@@ -1,4 +1,4 @@
-mport StatsPanel from "../StatsPanel";
+import StatsPanel from "../StatsPanel";
 
 export default function StatsPanelExample() {
   const mockStats = {
