@@ -1,4 +1,4 @@
-mport { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { GameStats } from "@shared/schema";
 
 interface StatsPanelProps {
